@@ -56,5 +56,30 @@ const products = [
     status: "Free Shopping",
   },
 ];
+document.getElementById("product").innerHTML=products.map(element=>
+  
+  `
+  
+
+  <div class="row ms-5 mt-5" style="width:1000px;">
+      <div class="col-sm-3">
+         <img src="${element.image}" style="width:230px; height:200px;">
+      </div>
+      <div class="col-sm-6">
+          <h3 class="card-title">${element.name}</h3>
+         <p class="card-text">${element.description}</p>
+         
+      </div>
+      <div class="col-sm-3">
+          <p style="font-size:30px;">${element.price}</p>
+          <p style="color:green;">${element.status}</p>
+         <a href="#" class="btn btn-primary ml-5 bg-purple" style="width:200px;">Details</a>
+         <a href="#" class="btn btn-primary mt-1 bg-pink" style="width:200px;">Delete</a>
+      </div>
+  </div> 
+   </div>
+  `
+
+  )
 
 
